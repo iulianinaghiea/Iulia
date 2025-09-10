@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fantasy Map Portfolio</title>
 <style>
-/* Body zentrieren, neutraler Hintergrund */
 body {
   margin: 0;
   background: #fff;
@@ -15,40 +14,23 @@ body {
   height: 100vh;
 }
 
-/* Container für die Map */
+/* Container der Map */
 .map-container {
   position: relative;
-  width: 1456px;   /* Breite der Map */
-  height: 815px;   /* Höhe der Map */
+  width: 1456px;
+  height: 815px;
 }
 
-/* Alle Segmente übereinander */
+/* Alle Segmente übereinander legen */
 .map-segment {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: pointer;
+  pointer-events: none; /* Standard: kein Segment blockiert Klicks */
   transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
-/* Hover-Effekt für jedes Segment */
-.map-segment:hover {
-  filter: drop-shadow(0 0 20px gold) brightness(1.2);
-  transform: scale(1.02);
-}
-</style>
-</head>
-<body>
-
-<div class="map-container">
-  <img src="svg1.svg" class="map-segment" alt="Region 1">
-  <img src="svg2.svg" class="map-segment" alt="Region 2">
-  <img src="svg3.svg" class="map-segment" alt="Region 3">
-  <img src="svg4.svg" class="map-segment" alt="Region 4">
-</div>
-
-</body>
-</html>
-
+/* Jede Region ak*
