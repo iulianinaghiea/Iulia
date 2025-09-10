@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fantasy Map Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fantasy Map Portfolio</title>
+<style>
+body {
+  margin: 0;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    .map-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 0; /* damit die Bilder seamless sind */
-      max-width: 800px; /* kannst du anpassen */
-      max-height: 800px;
-    }
+.map-container {
+  position: relative;
+  width: 800px;   /* Gesamtbreite deiner Map */
+  height: 800px;  /* Gesamthöhe deiner Map */
+}
 
-    .map-segment {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: filter 0.3s ease, transform 0.3s ease;
-      cursor: pointer;
-    }
+.map-segment {
+  position: absolute;
+  width: 50%;     /* jede Hälfte */
+  height: 50%;    /* jede Hälfte */
+  object-fit: cover;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
 
-    .map-segment:hover {
-      filter: drop-shadow(0 0 15px gold) brightness(1.1);
-      transform: scale(1.02);
-      z-index: 2;
-    }
-  </style>
+.map-segment:hover {
+  filter: drop-shadow(0 0 15px gold) brightness(1.1);
+  transform: scale(1.02);
+  z-index: 2;
+}
+</style>
 </head>
 <body>
-  <div class="map-container">
-    <img src="svg1.png" alt="Map Segment 1" class="map-segment">
-    <img src="svg2.png" alt="Map Segment 2" class="map-segment">
-    <img src="svg3.png" alt="Map Segment 3" class="map-segment">
-    <img src="svg4.png" alt="Map Segment 4" class="map-segment">
-  </div>
+<div class="map-container">
+  <img src="svg1.png" class="map-segment" style="top:0; left:0;">
+  <img src="svg2.png" class="map-segment" style="top:0; left:50%;">
+  <img src="svg3.png" class="map-segment" style="top:50%; left:0;">
+  <img src="svg4.png" class="map-segment" style="top:50%; left:50%;">
+</div>
 </body>
 </html>
