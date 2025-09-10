@@ -16,32 +16,8 @@ body {
 
 .map-container {
   position: relative;
-  width: 800px;   /* Gesamtbreite deiner Map */
-  height: 800px;  /* Gesamthöhe deiner Map */
+  width: 1456px;   /* Breite deiner Bilder */
+  height: 815px;   /* Höhe deiner Bilder */
 }
 
-.map-segment {
-  position: absolute;
-  width: 50%;     /* jede Hälfte */
-  height: 50%;    /* jede Hälfte */
-  object-fit: cover;
-  transition: filter 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-}
-
-.map-segment:hover {
-  filter: drop-shadow(0 0 15px gold) brightness(1.1);
-  transform: scale(1.02);
-  z-index: 2;
-}
-</style>
-</head>
-<body>
-<div class="map-container">
-  <img src="svg1.png" class="map-segment" style="top:0; left:0;">
-  <img src="svg2.png" class="map-segment" style="top:0; left:50%;">
-  <img src="svg3.png" class="map-segment" style="top:50%; left:0;">
-  <img src="svg4.png" class="map-segment" style="top:50%; left:50%;">
-</div>
-</body>
-</html>
+.map
